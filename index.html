@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div>
             <div class="logo">
-                <img src="logo.png">
+                <img src="images/logo.png" alt="logo">
             </div>
             <div class="header-menu">
-                <p>Strona główma</p>
-                <p>O nas</p>
-                <p>Menu</p>
-                <p>Akcesoria</p>
-                <p>Kontakt</p>
+                <p onclick="scrollToSection('home')">Strona główna</p>
+                <p onclick="scrollToSection('about')">O nas</p>
+                <p onclick="scrollToSection('menu')">Menu</p>
+                <p onclick="scrollToSection('reviews')">Recenzje</p>
+                <p onclick="scrollToSection('contact')">Kontakt</p>
             </div>
             <div class="header-cart">
-                <img src="cart.png">
+                <img src="images/cart.png" alt="cart">
             </div>
         </div>
     </header>
     <main>
-        <section class="about">
+        <section id="about" class="about">
             <div class="about-image">
-                <img src="img/about.jpg" alt="O nas">
+                <img src="images/about.png" alt="O nas">
             </div>
             <div class="about-text">
                 <div>
@@ -40,50 +43,43 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div>
-                <p>NASZE HERBATY</p>
-                <h1>Znajdź swój ulubiony smak</h1>
-            </div>
-        </section>
-        <section class="section">
+        <section id="menu" class="section">
             <div class="subtitle">NASZE HERBATY</div>
             <div class="title">Znajdź swój ulubiony smak</div>
             <div class="menu-cards">
                 <div class="menu-card">
-                    <img src="" alt="Czarna herbata" />
+                    <img src="images/herbataCzarna.png" alt="Czarna herbata" />
                     <h3>Herbata Czarna</h3>
                     <p>Klasyczna, intensywna i pobudzająca.</p>
                     <a href="#">Zobacz więcej →</a>
                 </div>
                 <div class="menu-card">
-                    <img src="" alt="Zielona herbata" />
+                    <img src="images/herbataZielona.png" alt="Zielona herbata" />
                     <h3>Herbata Zielona</h3>
                     <p>Delikatna, świeża i pełna antyoksydantów.</p>
                     <a href="#">Zobacz więcej →</a>
                 </div>
                 <div class="menu-card">
-                    <img src="" alt="Ziołowa herbata" />
+                    <img src="images/herbatyZiołowe.png" alt="Ziołowa herbata" />
                     <h3>Herbaty Ziołowe</h3>
                     <p>Naturalne wsparcie dla Twojego organizmu.</p>
                     <a href="#">Zobacz więcej →</a>
                 </div>
                 <div class="menu-card">
-                    <img src="" alt="Biała herbata" />
+                    <img src="images/herbataBiała.png" alt="Biała herbata" />
                     <h3>Herbata Biała</h3>
                     <p>Najdelikatniejsza, o subtelnym smaku.</p>
                     <a href="#">Zobacz więcej →</a>
                 </div>
                 <div class="menu-card">
-                    <img src="" alt="Oolong" />
+                    <img src="images/herbataOolong.png" alt="Oolong" />
                     <h3>Herbata Oolong</h3>
                     <p>Wyjątkowy balans między smakiem a aromatem.</p>
                     <a href="#">Zobacz więcej →</a>
                 </div>
             </div>
-            <button class="btn">Zobacz wszystkie herbaty</button>
         </section>
-        <section class="section">
+        <section id="reviews" class="section">
             <div class="subtitle">OPINIE KLIENTÓW</div>
             <h1 class="title">Co mówią nasi klienci</h1>
             <div class="reviews">
@@ -111,25 +107,33 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="contact">
         <div class="footer-grid">
-        <div>
-            <div class="logo">
-                <img src="logo.png">
+
+            <div class="footer-top">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+
+                <p class="footer-text">
+                    Przytulne miejsce z miłą atmosferą i dobrą obsługą.
+                </p>
             </div>
-            <p class="footer-text">
-                Przytulne miejsce z miłą atmosferą i dobrą obsługą.
-            </p>
-        </div>
-        <div>
-            <div class="footer-title">Szybkie linki</div>
-            <p class="footer-links">
-                <p>Strona główna</p>
-                <p>O nas</p>
-                <p>Nasze herbaty</p>
-                <p>Akcesoria</p>
-            </p>
+
+            <div>
+                <div class="footer-title">Szybkie linki</div>
+
+                <div class="footer-links">
+                    <p onclick="scrollToSection('home')">Strona główna</p>
+                    <p onclick="scrollToSection('about')">O nas</p>
+                    <p onclick="scrollToSection('menu')">Menu</p>
+                    <p onclick="scrollToSection('reviews')">Recenzje</p>
+                    <p onclick="scrollToSection('contact')">Kontakt</p>
+                </div>
+            </div>
         </div>
     </footer>
+    <script src="script.js"></script>
+</body>
 </body>
 </html>
