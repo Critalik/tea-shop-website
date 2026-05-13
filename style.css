@@ -94,8 +94,10 @@ header div {
 
 .menu-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 5px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .menu-card {
@@ -190,32 +192,113 @@ footer {
 .footer-links p:hover {
     color: white;
 }
-
-@media (max-width: 768px) {
-
-    .header-menu {
-        display: none;
+@media (max-width: 1513px) {
+    .menu-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .menu-card:nth-child(4),
+    .menu-card:nth-child(5) {
+        grid-column: span 1;
     }
 
+    .menu-cards {
+        justify-content: center;
+    }
+}
+@media (max-width: 1024px) {
     .about {
         flex-direction: column;
         text-align: center;
-        padding: 30px;
     }
 
     .about-text h2 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .title {
-        font-size: 32px;
+        font-size: 34px;
     }
-
-    .section {
-        padding: 60px 20px;
+}
+@media (max-width: 744px) {
+    .header-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        text-align: center;
     }
+    .header-menu p {
+        padding: 0px 25px;
+    }
+    .about {
+        display: flex;
+        align-items: center;
+        margin: 50px 20%;
+        padding: 50px;
+        background: #2f2f2f;
+        border-radius: 20px;
+        color: white;
+    }
+}
 
-    footer {
-        padding: 50px 20px;
+@media (max-width: 500px) {
+    header > div {
+        gap: 10px;
+    }
+    .header-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        text-align: center;
+    }
+    .header-menu p {
+        padding: 0px 10px;
+    }
+    .logo img {
+        height: 45px;
+    }
+    .about-text h2 {
+        font-size: 26px;
+    }
+    .menu-card img {
+        height: 120px;
+    }
+    .card {
+        padding: 18px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+
+    header > div {
+        gap: 0px;
+    }
+    .header-menu {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px;
+        text-align: center;
+    }
+    .header-menu p {
+        padding: 0px 0px;
+    }
+    .logo img {
+        height: 25px;
+    }
+    .about-text h2 {
+        font-size: 7px;
+    }
+    .menu-card img {
+        height: 80px;
+    }
+    .card {
+        padding: 12px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 }
